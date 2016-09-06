@@ -3,26 +3,26 @@ import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class GithubService {
-    private username='bradtraversy';
-    private client_id = '573457e60aceed25f200';
-    private client_secret='49ae294f862cee1b64513df6f584fb6a85f89def';
+export class GithubService{
+    private username = 'bradtraversy';
+    private client_id = 'd9308aacf8b204d361fd';
+    private client_secret='62551cc02cee983fff0bac41baf170eb5a312c1c';
     
-    constructor(private _http: Http){
-        console.log('Github Service Started...');
+    constructor(private _http:Http){
+        console.log('Github Service Init...');
     }
     
     getUser(){
-        return this._http.get('https://api.github.com/users/'+this.username+'?client_id='+this.client_id+'&client_secret='+this.client_secret)
+        return this._http.get('https://api.github.com/users/'+this.username)
             .map(res => res.json());
     }
     
     getRepos(){
-        return this._http.get('https://api.github.com/users/'+this.username+'/repos?client_id='+this.client_id+'&client_secret='+this.client_secret)
+        return this._http.get('https://api.github.com/users/'+this.username+'/repos')
             .map(res => res.json());
     }
     
-    updateUsername(username:any){
+    updateUsername(username:string){
         this.username = username;
     }
 }

@@ -3,7 +3,7 @@
 Simple Angular 2 app that searches Github user profiles and repositories. Goes along with video tutorial at https://www.youtube.com/watch?v=u83MLQ1VsKI
 
 ### Version
-1.0.1 - Uses Angular RC6. The original version that uses RC4 is in the "rc4_old" folder
+1.0.0
 
 ### Usage
 
